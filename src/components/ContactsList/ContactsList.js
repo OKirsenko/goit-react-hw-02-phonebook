@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import s from './ContactList.module.css';
 export default function ContactsList({ contacts, removeContact }) {
   return (
@@ -13,3 +14,7 @@ export default function ContactsList({ contacts, removeContact }) {
     </ul>
   );
 }
+ContactsList.propTypes = {
+  contacts: PropTypes.array,
+  removeContact: PropTypes.func.isRequired,
+};
